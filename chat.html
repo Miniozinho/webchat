@@ -13,13 +13,13 @@
 		padding: 0px;
 		background-color: #222;
 	}
-	p{
+	#titulo{
 		 font-family: '8BITWONDERNominal'; 
 		margin: 0px;
 		color:white;
 		font-size:100px;
 	}
-	input{
+	#nickname{
 		padding-top: 20px;
 		 font-family: '8BITWONDERNominal'; 
 		text-align: center;
@@ -51,13 +51,50 @@
 
 <div id="login">	
 	<div id="container">
-<p>Digite o seu nickname</p>
-<input style="width: 50%;" id="nome"/>
+<p id="titulo">Digite o seu nickname</p>
+<input id="nickname" style="width: 50%;" id="nome"/>
 </div>
 </div>
 
 <!-- Parte do chat!-->
-<div id="chat"></div>
+<div id="chat">
+	
+	<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">Welcome, <b></b></p>
+        <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+        <div style="clear:both"></div>
+    </div>
+     
+    <div id="chatbox">
+        <p>asdasdasdasdasd</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>ola mund</p><br>
+        <p>como vai</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>ola mund</p><br>
+        <p>como vai</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>ola mund</p><br>
+        <p>como vai</p><br>
+        <p>asdasdasdasdasd</p><br>
+        <p>ola mund</p><br>
+        <p>como vai</p><br>
+    </div>
+     
+    <form name="message" action="">
+        <input name="usermsg" type="text" id="usermsg" size="63" />
+        <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+    </form>
+</div>
+
+</div>
 
 </body>
 </html>

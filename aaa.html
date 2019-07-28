@@ -4,72 +4,68 @@
     <style type="text/css">
         /* CSS Document */
 body {
-    font:12px arial;
-    color: #222;
-    text-align:center;
-    padding:35px; }
+    margin: 0px;
+    padding: 0px;
+    
+    }
   
-form, p, span {
-    margin:0;
-    padding:0; }
+.button {
+    padding: 0px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
   
-input { font:12px arial; }
-  
-a {
-    color:#0000FF;
-    text-decoration:none; }
-  
-    a:hover { text-decoration:underline; }
-  
-#wrapper, #loginform {
+#wrapper {
     margin:0 auto;
-    padding-bottom:25px;
     background:#EBF4FB;
-    width:504px;
-    border:1px solid #ACD8F0; }
+    width:80%;
+    height: 95vh;
+    padding-top:5vh; 
+     }
   
-#loginform { padding-top:18px; }
-  
-    #loginform p { margin: 5px; }
   
 #chatbox {
     text-align:left;
     margin:0 auto;
-    margin-bottom:25px;
-    padding:10px;
-    background:#fff;
-    height:270px;
-    width:430px;
+    background:white;
+    height:85vh;
+    width:80%;
     border:1px solid #ACD8F0;
     overflow:auto; }
   
 #usermsg {
-    width:395px;
-    border:1px solid #ACD8F0; }
+    width:80%;
+    border:1px solid #ACD8F0; 
+    height: 9.5vh;
+    }
+
+#sendmsg{
+
+    width: 19%;
+    height: 9.5vh;
+    background-color: #555;
+    border:solid 0.2vh black;
+  color: white;
+}
   
-#submit { width: 60px; }
-  
-.error { color: #ff0000; }
-  
-#menu { padding:12.5px 25px 12.5px 25px; }
-  
-.welcome { float:left; }
-  
-.logout { float:right; }
-  
-.msgln { margin:0 0 2px 0; }
+#sendmsg:hover {
+  background-color: white;
+  color: #555;
+}
+
     </style>
 <title>Chat - Customer Module</title>
 
 </head>
  
 <div id="wrapper">
-    <div id="menu">
-        <p class="welcome">Welcome, <b></b></p>
-        <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
-        <div style="clear:both"></div>
-    </div>
-     
+
     <div id="chatbox">
         <p>asdasdasdasdasd</p><br>
         <p>asdasdasdasdasd</p><br>
@@ -92,10 +88,11 @@ a {
         <p>como vai</p><br>
     </div>
      
-    <form name="message" action="">
-        <input name="usermsg" type="text" id="usermsg" size="63" />
-        <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
-    </form>
+    <div id="enviar">
+        <input type="text" id="usermsg" />
+        <input type="submit"  value="Send" class="button" id="sendmsg"/>
+
+    </div>
 </div>
 
 </body>
