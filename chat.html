@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+	<style type="text/css">
+	body{
+		margin:0px;
+		padding: 0px;
+		background-color: #222;
+	}
+	p{
+		 font-family: '8BITWONDERNominal'; 
+		margin: 0px;
+		color:white;
+		font-size:100px;
+	}
+	input{
+		padding-top: 20px;
+		 font-family: '8BITWONDERNominal'; 
+		text-align: center;
+		font-size:75px;
+		border:none;
+		background-color:#222;
+		border-bottom: 2px solid white;
+		color:white;
+	}
+
+		#login{
+			text-align: center;
+			height: 100vh;
+			font-size: 40px;
+			display: none;
+			}
+
+		#container{
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+		}
+	</style>
 	<title>	WebChat em Flask</title>
 </head>
 <body>
 
-<div>	
-<label>Digite o seu nickname: <input id="nome"/></label>
+<div id="login">	
+	<div id="container">
+<p>Digite o seu nickname</p>
+<input style="width: 50%;" id="nome"/>
+</div>
+</div>
+
+<!-- Parte do chat!-->
+
+<div id="chat">
+	
 </div>
 </body>
 </html>
