@@ -1,11 +1,33 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
     <style type="text/css">
         /* CSS Document */
+
+.style-8::-webkit-scrollbar-track
+{
+    border: 1px solid black;
+    background-color: #F5F5F5;
+}
+
+.style-8::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.style-8::-webkit-scrollbar-thumb
+{
+    background-color: #000000;  
+}
+
+
+
 body {
     margin: 0px;
     padding: 0px;
+    background-color: #222;
     
     }
   
@@ -22,8 +44,10 @@ body {
 }
   
 #wrapper {
+    border-left: solid;
+    border-right: solid;
     margin:0 auto;
-    background:#EBF4FB;
+    background:#222;
     width:80%;
     height: 95vh;
     padding-top:5vh; 
@@ -36,27 +60,33 @@ body {
     background:white;
     height:85vh;
     width:80%;
-    border:1px solid #ACD8F0;
     overflow:auto; }
   
 #usermsg {
+    float: left;
+    bottom: 0;
+    padding: 0px;
+    margin: 0px;
     width:80%;
-    border:1px solid #ACD8F0; 
-    height: 9.5vh;
+    border:none;
+    height: 10vh;
     }
 
 #sendmsg{
-
-    width: 19%;
-    height: 9.5vh;
+    float: right;
+    bottom: 0;
+    width: 20%;
+    height: 10vh;
     background-color: #555;
-    border:solid 0.2vh black;
   color: white;
 }
   
 #sendmsg:hover {
   background-color: white;
   color: #555;
+}
+#enviar{
+    height: 10vh;
 }
 
     </style>
@@ -66,7 +96,7 @@ body {
  
 <div id="wrapper">
 
-    <div id="chatbox">
+    <div class="style-8"id="chatbox">
         <p>asdasdasdasdasd</p><br>
         <p>asdasdasdasdasd</p><br>
         <p>asdasdasdasdasd</p><br>
