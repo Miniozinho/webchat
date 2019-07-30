@@ -3,11 +3,6 @@
 <head>
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
 	<style type="text/css">
-
- 
-
-
-
 	body{
 		margin:0px;
 		padding: 0px;
@@ -51,7 +46,7 @@
 <div id="login">	
 	<div id="container">
 <p id="titulo">Digite o seu nickname</p>
-<input id="nickname" style="width: 50%;" id="nome"/>
+<input onkeydown="checarenter(this);" id="nickname" style="width: 50%;" id="nome"/>
 </div>
 </div>
 
@@ -59,4 +54,24 @@
 
 
 </body>
+
+<script type="text/javascript">
+	function checarenter(z){
+		
+		if (event.key == "Enter"){
+			if (z.value.length<4){
+				alert("Seu Nickname deve possuir pelo menos 4 caracteres!");
+			} else if(z.value.length>25){
+				alert("Seu Nickname nao pode ultrapassar 25 caracteres!")
+			}else{
+				//login display none
+				//parte do chat aparece
+				//enviar nickname para o flask
+				var nick = z.value;
+				document.getElementById("login").style.display = "none";
+
+			}
+		}
+	}
+</script>
 </html>
