@@ -1,22 +1,122 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/minecraftia" type="text/css"/>
 	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+	    <style type="text/css">
+        /* CSS Document */
+
+#batepapo{
+	display: none;
+}
+
+.style-8::-webkit-scrollbar-track
+{
+    border: 1px solid black;
+    background-color: #F5F5F5;
+}
+
+.style-8::-webkit-scrollbar
+{
+    width: 10px;
+    background-color: #F5F5F5;
+}
+
+.style-8::-webkit-scrollbar-thumb
+{
+    background-color: #000000;  
+}
+
+
+p{
+    color:white;
+    font-family: 'MinecraftiaRegular'; 
+}
+
+.button {
+    padding: 0px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+  
+#wrapper {
+    border-left: solid;
+    border-right: solid;
+    margin:0 auto;
+    width:80%;
+    height: 90vh;
+  
+     }
+  
+  
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    /*background:#3F4a4F;*/
+    height:90vh;
+    width:100%;
+    overflow:auto; 
+}
+
+  
+#usermsg {
+    border:none;
+    float: left;
+    bottom: 0;
+    padding-left: 2.5%;
+    margin: 0px;
+    width:77.5%;
+    height: 10vh;
+    font-family: "MinecraftiaRegular";
+    font-size: 40px;
+    }
+
+#sendmsg{
+	font-family: "MinecraftiaRegular";
+    border: solid 3px #a72c1c;
+    float: right;
+    bottom: 0;
+    width: 20%;
+    height: 10vh;
+    background-color: #e74c3c;
+  color: white;
+  outline: none;
+}
+  
+#sendmsg:hover {
+  background-color: #aaa;
+  color: #000;
+}
+#enviar{
+
+    height: 10vh;
+}
+
+    </style>
 	<style type="text/css">
 	body{
 		margin:0px;
 		padding: 0px;
+		
 		background-color: #222;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
 	}
 	#titulo{
-		 font-family: '8BITWONDERNominal'; 
+		font-family: 'MinecraftiaRegular'; 
 		margin: 0px;
 		color:white;
 		font-size:100px;
 	}
 	#nickname{
 		padding-top: 20px;
-		 font-family: '8BITWONDERNominal'; 
+		font-family: 'MinecraftiaRegular'; 
 		text-align: center;
 		font-size:75px;
 		border:none;
@@ -46,12 +146,68 @@
 <div id="login">	
 	<div id="container">
 <p id="titulo">Digite o seu nickname</p>
-<input onkeydown="checarenter(this);" id="nickname" style="width: 50%;" id="nome"/>
+<input onkeydown="checarenter(this);" id="nickname" style="width: 50%;" id="nome" maxlength="25"/>
 </div>
 </div>
 
 <!-- Parte do chat!-->
+<div id="batepapo">
 
+<div id="wrapper">
+
+    <div class="style-8"id="chatbox" style="background-color:rgba(2, 2, 2, 0.75)">
+    
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     
+  	 
+     
+     
+
+    </div>
+     </div>
+
+    <div id="enviar">
+        <input type="text" id="usermsg" />
+        <input type="submit"  value="Enviar ->" class="button" id="sendmsg"/>
+
+    </div>
+</div>
 
 </body>
 
@@ -69,6 +225,8 @@
 				//enviar nickname para o flask
 				var nick = z.value;
 				document.getElementById("login").style.display = "none";
+				document.getElementById("batepapo").style.display = "block";
+				document.body.style.backgroundImage = "url('mine.jpg')";
 
 			}
 		}
