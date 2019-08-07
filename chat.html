@@ -1,8 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/minecraftia" type="text/css"/>
-	<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/>
+  <!--MinecraftiaRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/minecraftia" type="text/css"/>
+
+  <!--BeonRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/beon" type="text/css"/>
+
+  <!--CMUTypewriterTextRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/cmu-typewriter" type="text/css"/>
+
+  <!--DatalegreyaDot-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/datalegreya" type="text/css"/>
+
+  <!--ArchicocoRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/archicoco" type="text/css"/>
+
+  <!--QuaeriteRegnumDeiRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/quaerite-regnum-dei" type="text/css"/>
+
+  <!--DancingScriptRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/dancing" type="text/css"/>
+
+  <!--BananaBrickRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/banana-brick" type="text/css"/>
+
+  <!--SomeTimeLaterRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/some-time-later" type="text/css"/>
+
+  <!--KaushanScriptRegular-->
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/kaushan-script" type="text/css"/>
+
+
+  <!--Alterar'p' 'usermsg' 'sendmsg' 'titulo' 'nickname'-->
 	    <style type="text/css">
         /* CSS Document */
 
@@ -28,7 +58,7 @@
 }
 
 
-p{
+.chattext{
     color:white;
     font-family: 'MinecraftiaRegular'; 
 }
@@ -203,7 +233,11 @@ p{
 .sidenav a:hover{
   color: #f1f1f1;
   cursor: pointer;
-  font-size: 150px;
+  font-size: 140px;
+}
+
+.sidenav .closebtn:hover{
+  font-size: 36px;
 }
 
 .sidenav .closebtn {
@@ -239,6 +273,27 @@ p{
 #background{
     display: none;
 }
+
+#fontselec{
+
+  width:40vw;
+  height: 25vw;
+  background-color: black;
+  color:white;
+  display: inline-table;
+  border: solid black 3px;
+  border-radius: 20px;
+  font-size: 18px;
+  margin: 1vw;
+}
+
+#fontselec h1{
+  padding: 2vw;
+}
+
+#fontes{
+  display: none;
+}
 	</style>
 	<title>	WebChat em Flask</title>
 </head>
@@ -259,11 +314,42 @@ p{
   <div id="selecionar">
     <br>
       <a onclick="mostrarbac();">Escolher Backgrounds</a>
-      <a >Escolher Fontes</a>
+      <a onclick="mostrarfont();">Escolher Fontes</a>
       <a onclick="mostrarbut();">Escolher Botão</a>
   </div>
   <div id="backs"></div>
-<div id="fontes"></div>
+<div id="fontes">
+  <div onclick="gerarfont('MinecraftiaRegular');" id="fontselec" style="font-family: 'MinecraftiaRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('BeonRegular');" id="fontselec" style="font-family: 'BeonRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('CMUTypewriterTextRegular');" id="fontselec" style="font-family: 'CMUTypewriterTextRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('DatalegreyaDot');" id="fontselec" style="font-family: 'DatalegreyaDot';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('ArchicocoRegular');" id="fontselec" style="font-family: 'ArchicocoRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('QuaeriteRegnumDeiRegular');" id="fontselec" style="font-family: 'QuaeriteRegnumDeiRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('DancingScriptRegular');" id="fontselec" style="font-family: 'DancingScriptRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('BananaBrickRegular');" id="fontselec" style="font-family: 'BananaBrickRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('SomeTimeLaterRegular');" id="fontselec" style="font-family: 'SomeTimeLaterRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+  <div onclick="gerarfont('KaushanScriptRegular');" id="fontselec" style="font-family: 'KaushanScriptRegular';">
+    <h1 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque est nisi, </h1>
+  </div>
+</div>
 <div id="botao">
     <h1 style="font-size: 70px; color: white;">Cor dos Botões</h1>
     <br>
@@ -318,43 +404,33 @@ p{
 
     <div class="style-8"id="chatbox" style="background-color:rgba(2, 2, 2, 0.75)">
     
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
-     <div style="padding-left: 20px;"><p style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+<div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:yellow;">Mauricio: </strong>ola Gabriel!</p></div>
+     <div style="padding-left: 20px;"><p class="chattext" style="font-size:25px;text-shadow: 1px 0.1em 0.1em black; "><strong style="text-shadow: 1px 0.1em 0.1em black; color:red;">Miniozinho:</strong> ola mauricio</p></div>
+
      
   	 
      
@@ -393,6 +469,7 @@ p{
 		}
 	}
 
+
     function abrirmenu(){
          document.getElementById("meumenu").style.width = "100%";
             document.getElementById('selecionar').style.display = 'inline-block';
@@ -402,17 +479,22 @@ p{
          document.getElementById("meumenu").style.width = "0";
          document.getElementById('background').style.display = 'none';
          document.getElementById('botao').style.display = 'none';
+         document.getElementById('fontes').style.display = 'none';
 
     }
 
-    function mostrarbac(x){
+    function mostrarbac(){
         document.getElementById('background').style.display = 'block';
         document.getElementById('selecionar').style.display = 'none';
     }
 
-    function mostrarbut(x){
+    function mostrarbut(){
         document.getElementById('botao').style.display = 'block';
         document.getElementById('selecionar').style.display = 'none';
+    }
+    function mostrarfont(){
+      document.getElementById('selecionar').style.display = 'none';
+      document.getElementById('fontes').style.display = 'block';
     }
 
     function change(x){
@@ -424,16 +506,26 @@ p{
 //gera o seletor de backgrounds
 var gerar = "<div id='background'>"
 
- for(var x = 1;x<31;x++){
+ for(var x = 1;x<33;x++){
     var imagem = '"Imagens/'+x+'.jpg"'
 gerar += "<div style='background-image: url("+imagem+");' id='colorselec' onclick='change("+x+")'></div> "
  }
+
 gerar+= "</div>"
      document.getElementById('backs').innerHTML = gerar;
  
 
 
- function gerarfont(){
+ function gerarfont(x){
+
+  var cols = document.getElementsByClassName('chattext');
+  for(i = 0; i < cols.length; i++) {
+    cols[i].style.fontFamily = x;
+  }
+document.getElementById("usermsg").style.fontFamily = x;
+document.getElementById("sendmsg").style.fontFamily = x;
+document.getElementById("titulo").style.fontFamily = x;
+document.getElementById("nickname").style.fontFamily = x;
 
  }
 
