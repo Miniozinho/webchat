@@ -199,7 +199,7 @@ p{
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: 0.6s;
 
 }
 
@@ -213,6 +213,16 @@ p{
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+#colorselec{
+    margin: 1vw;
+    height: 20vw;
+    width: 20vw;
+    background-size: 200%;
+    background-position: center;
+    border: solid white 2px;
+    display: inline-block;
 }
 
 	</style>
@@ -232,10 +242,9 @@ p{
 <div id="batepapo">
 <div id="meumenu" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="fecharmenu()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <div id="gerador">
+  <div id="colorselec" onclick="change(2)"></div>
+</div>
 </div>
 
 <button id="menu" onclick="abrirmenu();">
@@ -315,7 +324,7 @@ p{
 				var nick = z.value;
 				document.getElementById("login").style.display = "none";
 				document.getElementById("batepapo").style.display = "block";
-				document.body.style.backgroundImage = "url('Imagens/mine.jpg')";
+				document.body.style.backgroundImage = "url('Imagens/1.jpg')";
 
 			}
 		}
@@ -328,5 +337,60 @@ p{
     function fecharmenu(){
          document.getElementById("meumenu").style.width = "0";
     }
+
+    function change(x){
+        alert(x);
+    }
+
+
+
+/*gerar botoes do menu
+<div id="gerador">
+  <div style=" background-image: url('Imagens/3.jpg');' id="colorselec" onclick="change(2)"></div>
+</div>
+*/
+var gerar = "<div id='gerador'>"
+
+ for(var x = 1;x<31;x++){
+    var imagem = '"Imagens/'+x+'.jpg"'
+gerar += "<div style='background-image: url("+imagem+");' id='colorselec' onclick='change("+x+")'></div> "
+ }
+gerar+= "</div>"
+     document.getElementById('gerador').innerHTML = gerar;
+
+    /*
+Ideias de temas
+
+1 minecraft
+2 slipknot
+3 dota
+4 lol
+5 cs go
+6 csgo2
+7 pubg
+8 twenty one pilots
+9 billie eilish
+10 emo
+11 barbye
+12 my little pony
+13 cyber punk
+14 paisagem praia
+15 comunismo
+16 k-on!
+17 atack on titan
+18 attack on titan2
+19 jojo
+20 espaco
+21 VIITUBE
+22 berti
+23 ponyo***
+24 chihiro
+25 kiki***
+26 mc brinquedo
+27 felipe neto
+28 mestres do capitalismo
+29 harry potter
+30 harry potter 2
+    */
 </script>
 </html>
