@@ -81,7 +81,6 @@ p{
 
 #sendmsg{
 	font-family: "MinecraftiaRegular";
-    border: solid 3px #a72c1c;
     float: right;
     bottom: 0;
     width: 20%;
@@ -91,10 +90,7 @@ p{
   outline: none;
 }
   
-#sendmsg:hover {
-  background-color: #aaa;
-  color: #000;
-}
+
 #enviar{
 
     height: 10vh;
@@ -109,6 +105,7 @@ p{
 		background-color: #222;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+        background-size: 100%;
 	}
 	#titulo{
 		font-family: 'MinecraftiaRegular'; 
@@ -188,7 +185,7 @@ p{
   left: 0;
   background-color: rgba(0, 0, 0, 0.85);
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.7s;
   padding-top: 60px;
   text-align:center;
 }
@@ -196,15 +193,17 @@ p{
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 100px;
   color: #818181;
   display: block;
-  transition: 0.6s;
+  transition: 0.3s;
 
 }
 
 .sidenav a:hover{
   color: #f1f1f1;
+  cursor: pointer;
+  font-size: 150px;
 }
 
 .sidenav .closebtn {
@@ -225,6 +224,21 @@ p{
     display: inline-block;
 }
 
+#butonselec{
+    margin: 1vw;
+    height: 20vw;
+    width: 20vw;
+    border: solid white 2px;
+    display: inline-block;
+}
+
+#botao{
+    display: none;
+}
+
+#background{
+    display: none;
+}
 	</style>
 	<title>	WebChat em Flask</title>
 </head>
@@ -242,10 +256,59 @@ p{
 <div id="batepapo">
 <div id="meumenu" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="fecharmenu()">&times;</a>
-  <div id="gerador">
-  <div id="colorselec" onclick="change(2)"></div>
+  <div id="selecionar">
+    <br>
+      <a onclick="mostrarbac();">Escolher Backgrounds</a>
+      <a >Escolher Fontes</a>
+      <a onclick="mostrarbut();">Escolher Botão</a>
+  </div>
+  <div id="backs"></div>
+<div id="fontes"></div>
+<div id="botao">
+    <h1 style="font-size: 70px; color: white;">Cor dos Botões</h1>
+    <br>
+    <div id="butonselec" style="background-color: red;" onclick="changebuton('red');"></div>
+    <div id="butonselec" style="background-color: green;" onclick="changebuton('green');"></div>
+    <div id="butonselec" style="background-color: blue;" onclick="changebuton('blue');"></div>
+    <div id="butonselec" style="background-color: white;" onclick="changebuton('white');"></div>
+    <div id="butonselec" style="background-color: gray;" onclick="changebuton('gray');"></div>
+    <div id="butonselec" style="background-color: azure;" onclick="changebuton('azure');"></div>
+    <div id="butonselec" style="background-color: orange;" onclick="changebuton('orange');"></div>
+    <div id="butonselec" style="background-color: aqua;" onclick="changebuton('aqua');"></div>
+    <div id="butonselec" style="background-color: cyan;" onclick="changebuton('cyan');"></div>
+    <div id="butonselec" style="background-color: darkgrey;" onclick="changebuton('darkgrey');"></div>
+    <div id="butonselec" style="background-color: darkmagenta;" onclick="changebuton('darkmagenta');"></div>
+    <div id="butonselec" style="background-color: darkorchid;" onclick="changebuton('darkorchid');"></div>
+    <div id="butonselec" style="background-color: darkslategray;" onclick="changebuton('darkslategray');"></div>
+    <div id="butonselec" style="background-color: floralwhite;" onclick="changebuton('floralwhite');"></div>
+    <div id="butonselec" style="background-color: gold;" onclick="changebuton('gold');"></div>
+    <div id="butonselec" style="background-color: black;" onclick="changebuton('black');"></div>
+
+    <br>
+    <h1  style="font-size: 70px; color: white;">Cor do texto do botão</h1>
+    <br>
+    <div id="butonselec" style="background-color: red;" onclick="changebutoncolor('red');"></div>
+    <div id="butonselec" style="background-color: green;" onclick="changebutoncolor('green');"></div>
+    <div id="butonselec" style="background-color: blue;" onclick="changebutoncolor('blue');"></div>
+    <div id="butonselec" style="background-color: white;" onclick="changebutoncolor('white');"></div>
+    <div id="butonselec" style="background-color: gray;" onclick="changebutoncolor('gray');"></div>
+    <div id="butonselec" style="background-color: azure;" onclick="changebutoncolor('azure');"></div>
+    <div id="butonselec" style="background-color: orange;" onclick="changebutoncolor('orange');"></div>
+    <div id="butonselec" style="background-color: aqua;" onclick="changebutoncolor('aqua');"></div>
+    <div id="butonselec" style="background-color: cyan;" onclick="changebutoncolor('cyan');"></div>
+    <div id="butonselec" style="background-color: darkgrey;" onclick="changebutoncolor('darkgrey');"></div>
+    <div id="butonselec" style="background-color: darkmagenta;" onclick="changebutoncolor('darkmagenta');"></div>
+    <div id="butonselec" style="background-color: darkorchid;" onclick="changebutoncolor('darkorchid');"></div>
+    <div id="butonselec" style="background-color: darkslategray;" onclick="changebutoncolor('darkslategray');"></div>
+    <div id="butonselec" style="background-color: floralwhite;" onclick="changebutoncolor('floralwhite');"></div>
+    <div id="butonselec" style="background-color: gold;" onclick="changebutoncolor('gold');"></div>
+    <div id="butonselec" style="background-color: black;" onclick="changebutoncolor('black');"></div>
+
+
+    
 </div>
 </div>
+
 
 <button id="menu" onclick="abrirmenu();">
 &#9776
@@ -332,31 +395,55 @@ p{
 
     function abrirmenu(){
          document.getElementById("meumenu").style.width = "100%";
+            document.getElementById('selecionar').style.display = 'inline-block';
     }
 
     function fecharmenu(){
          document.getElementById("meumenu").style.width = "0";
+         document.getElementById('background').style.display = 'none';
+         document.getElementById('botao').style.display = 'none';
+
+    }
+
+    function mostrarbac(x){
+        document.getElementById('background').style.display = 'block';
+        document.getElementById('selecionar').style.display = 'none';
+    }
+
+    function mostrarbut(x){
+        document.getElementById('botao').style.display = 'block';
+        document.getElementById('selecionar').style.display = 'none';
     }
 
     function change(x){
-        alert(x);
+        document.body.style.backgroundImage = "url('Imagens/"+x+".jpg')";
     }
 
 
 
-/*gerar botoes do menu
-<div id="gerador">
-  <div style=" background-image: url('Imagens/3.jpg');' id="colorselec" onclick="change(2)"></div>
-</div>
-*/
-var gerar = "<div id='gerador'>"
+//gera o seletor de backgrounds
+var gerar = "<div id='background'>"
 
  for(var x = 1;x<31;x++){
     var imagem = '"Imagens/'+x+'.jpg"'
 gerar += "<div style='background-image: url("+imagem+");' id='colorselec' onclick='change("+x+")'></div> "
  }
 gerar+= "</div>"
-     document.getElementById('gerador').innerHTML = gerar;
+     document.getElementById('backs').innerHTML = gerar;
+ 
+
+
+ function gerarfont(){
+
+ }
+
+ function changebuton(x){
+document.getElementById("sendmsg").style.backgroundColor = x;
+ }
+
+ function changebutoncolor(x){
+document.getElementById("sendmsg").style.color = x;
+ }
 
     /*
 Ideias de temas
